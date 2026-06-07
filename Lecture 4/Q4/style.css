@@ -1,0 +1,162 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#141414;
+    color:white;
+}
+
+/* Navbar */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+    background:rgba(0,0,0,0.6);
+}
+
+.logo{
+    color:#e50914;
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+/* Hero */
+
+.hero{
+    height:90vh;
+    background:
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba")
+    center/cover no-repeat;
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+        to top,
+        #141414,
+        rgba(0,0,0,0.3)
+    );
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:600px;
+    margin-left:60px;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:1.1rem;
+    line-height:1.6;
+}
+
+.hero-buttons{
+    margin-top:25px;
+}
+
+.hero-buttons button{
+    border:none;
+    padding:12px 24px;
+    margin-right:10px;
+    cursor:pointer;
+    border-radius:4px;
+    font-size:1rem;
+}
+
+.play-btn{
+    background:white;
+}
+
+.info-btn{
+    background:rgba(109,109,110,0.7);
+    color:white;
+}
+
+/* Rows */
+
+.row{
+    margin:20px 40px;
+}
+
+.row h2{
+    margin-bottom:10px;
+}
+
+.row-posters{
+    display:flex;
+    overflow-x:auto;
+    gap:12px;
+    padding-bottom:10px;
+    scrollbar-width:none;
+}
+
+.row-posters::-webkit-scrollbar{
+    display:none;
+}
+
+.row-posters img{
+    width:200px;
+    border-radius:6px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.row-posters img:hover{
+    transform:scale(1.12);
+    z-index:10;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .navbar{
+        padding:15px 20px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-content{
+        margin:20px;
+    }
+
+    .hero-content h1{
+        font-size:2.5rem;
+    }
+
+    .row{
+        margin:20px;
+    }
+
+    .row-posters img{
+        width:140px;
+    }
+}
